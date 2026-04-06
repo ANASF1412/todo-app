@@ -14,6 +14,10 @@ app.use(express.json());
 
 connectDB();
 
+app.get("/", (req, res) => {
+  res.json({ message: "Backend API running ✅", endpoints: { health: "/api/health", auth: "/api/auth", user: "/api/user" } });
+});
+
 app.get("/api/health", (req, res) => {
   res.json({ status: "Server running ✅" });
 });

@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "buildCommand": "cd server && npm install",
+  "devCommand": "cd server && npm run dev",
+  "public": "client/dist",
+  "functions": {
+    "server/**/*.js": {
+      "runtime": "nodejs18.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/server/server.js"
+    }
+  ],
+  "env": [
+    "MONGO_URI",
+    "JWT_SECRET",
+    "PORT"
+  ]
+}
