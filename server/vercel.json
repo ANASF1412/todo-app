@@ -1,10 +1,5 @@
 {
   "version": 2,
   "buildCommand": "npm install",
-  "devCommand": "npm run dev",
-  "functions": {
-    "server.js": {
-      "runtime": "nodejs24.x"
-    }
-  }
+  "devCommand": "npm run dev"
 }
